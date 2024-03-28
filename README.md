@@ -95,7 +95,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Social+Media;Contact+me+here)](https://git.io/typing-svg)
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/matheus-melo-589001269/" target="_blank">
+  <a href="https://www.linkedin.com/in/matheus-neto-melo-589001269/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" title="linkedin" />
   </a>
   
@@ -107,9 +107,6 @@
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" title="instagram" />
   </a>
   
- <a href="https://discord.gg/YWsuwsmfzh" target="_blank">
-    <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" title="discord">
-  </a> 
 
 </div>
 
