@@ -1,44 +1,21 @@
 name: Pac-Man Graph
 
 on:
-  schedule:
-    - cron: "0 * * * *" # Atualiza todo começo de hora
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      USERNAME: ${{ github.actor }}  # Adiciona o nome do usuário que está rodando o workflow
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate Pac-Man Graph (light)
-        uses: yoshi389111/github-profile-3d-contrib@0.6.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          settings: |
-            base: pacman
-            output: ./pacman-contribution-graph.svg
-
-      - name: Generate Pac-Man Graph (dark)
-        uses: yoshi389111/github-profile-3d-contrib@0.6.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          settings: |
-            base: pacman
-            theme: github-dark
-            output: ./pacman-contribution-graph-dark.svg
-
-      - name: Push to output branch
+      - name: Run Pac-Man Graph Generator
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git fetch origin
-          git checkout output || git checkout --orphan output
-          rm -rf *
-          mv pacman-contribution-graph.svg pacman-contribution-graph-dark.svg .
-          git add pacman-contribution-graph.svg pacman-contribution-graph-dark.svg
-          git commit -m "update pacman graph" || echo "No changes"
-          git push -f origin output
+          # Exemplo - substitua pelo seu comando/script real
+          echo "Usuário: $matheusmelo18"
+          # Seu script que utiliza a variável USERNAME
